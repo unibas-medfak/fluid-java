@@ -13,6 +13,26 @@ bits, rendered in Crockford Base32.
   40 bits   40 bits
 ```
 
+## Installation
+
+FlUID is available from Maven Central.
+
+Maven:
+
+```xml
+<dependency>
+    <groupId>ch.unibas.medizin</groupId>
+    <artifactId>fluid</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+Gradle:
+
+```kotlin
+implementation("ch.unibas.medizin:fluid:1.0.0")
+```
+
 ## Usage
 
 ```java
