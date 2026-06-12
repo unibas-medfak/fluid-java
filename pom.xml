@@ -39,6 +39,8 @@
 
     <properties>
         <maven.compiler.release>21</maven.compiler.release>
+        <!-- Publishing goes through central-publishing-maven-plugin, not deploy:deploy -->
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
     <dependencies>
@@ -121,10 +123,19 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.sonatype.central</groupId>
+                <groupId>io.github.mavenplugins</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.10.0</version>
+                <version>1.2.0</version>
                 <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>publish-to-central</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>publish</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <publishingServerId>central</publishingServerId>
                 </configuration>
