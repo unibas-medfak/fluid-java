@@ -8,6 +8,7 @@
     <version>1.0.0</version>
 
     <name>FlUID</name>
+    <url>https://github.com/unibas-medfak/fluid-java</url>
     <description>
         Compact, time-sortable unique identifiers:
         40-bit millisecond timestamp plus 40 random bits,
